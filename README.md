@@ -1,926 +1,670 @@
-# Build With Us — Full Stack Developer Collaboration Platform
+<div align="center">
 
-<p align="center">
-  <b>Developer Social Network • Projects • Jobs • Hackathons • Team Finder • AI Chat • AI Code Review</b>
-</p>
+# 🚀 BuildWithUs Frontend
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Frontend-React%2019-61DAFB?style=for-the-badge&logo=react" />
-  <img src="https://img.shields.io/badge/Vite-7.3.1-646CFF?style=for-the-badge&logo=vite" />
-  <img src="https://img.shields.io/badge/Backend-Spring%20Boot%203.2.1-6DB33F?style=for-the-badge&logo=springboot" />
-  <img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge&logo=openjdk" />
-  <img src="https://img.shields.io/badge/MySQL-8.0-blue?style=for-the-badge&logo=mysql" />
-  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker" />
-</p>
+A modern developer collaboration platform frontend built with **React 19**, **TypeScript**, **Vite**, **Tailwind CSS**, **React Query**, **Zustand**, **Framer Motion**, and **Three.js**.
+
+BuildWithUs helps developers discover projects, find collaborators, explore jobs and hackathons, manage profiles, use AI tools, and access dashboard/admin features from a clean responsive UI.
+
+</div>
 
 ---
 
 ## 📌 Project Overview
 
-**Build With Us** is a full-stack platform for developers where users can create profiles, discover other developers, post projects, request collaborators, browse jobs, join hackathons, find teams, use AI chat, and run AI code reviews.
+This repository contains only the **frontend client** of BuildWithUs. It communicates with a backend REST API using Axios and JWT authentication.
 
-The project contains two applications:
+### Main Features
 
-| Part | Folder | Description |
-|---|---|---|
-| Backend | `BuildWithUs-Backend-main/` | Spring Boot REST API with JWT, OAuth2, MySQL, Redis, Flyway, Cloudinary and Groq AI integration |
-| Frontend | `BuildWithUs-Frontend-main/` | React + Vite + TypeScript frontend with public pages, auth pages, dashboard, admin dashboard and AI tools |
+- Beautiful landing page with animated hero, 3D/particle UI and feature sections
+- User authentication: sign in, sign up, forgot password, OAuth callback handling
+- JWT token storage and automatic refresh-token flow
+- Public pages for developers, projects, jobs, hackathons, team finder and leaderboard
+- Protected dashboard routes for profile, projects, AI chat, AI code review, notifications and settings
+- Admin dashboard routes protected by role-based checks
+- API state management with TanStack React Query
+- Global auth state with Zustand persist middleware
+- Toast notifications using Sonner
+- Reusable UI components like cards, buttons, modals, badges, skeletons and empty states
 
 ---
 
 ## 🖼️ Frontend Screenshots
 
-Create the folder below in the frontend repo and place screenshots with these exact names:
+> Add more screenshots in the `screenshots/` folder and update the paths below.
 
-```text
-BuildWithUs-Frontend-main/docs/screenshots/
-├── home-page.png
-├── sign-in-page.png
-├── developers-page.png
-├── projects-page.png
-├── jobs-page.png
-├── dashboard-page.png
-├── ai-chat-page.png
-└── ai-code-review-page.png
-```
+### Home / Landing Preview
 
-Then this README will show them automatically:
+![Home Preview](./screenshots/home-preview.png)
 
-### Home Page
-![Home Page](docs/screenshots/home-page.png)
+Recommended screenshot list for GitHub README:
 
-### Sign In Page
-![Sign In Page](docs/screenshots/sign-in-page.png)
-
-### Developers Page
-![Developers Page](docs/screenshots/developers-page.png)
-
-### Projects Page
-![Projects Page](docs/screenshots/projects-page.png)
-
-### Jobs Page
-![Jobs Page](docs/screenshots/jobs-page.png)
-
-### Dashboard Page
-![Dashboard Page](docs/screenshots/dashboard-page.png)
-
-### AI Chat Page
-![AI Chat Page](docs/screenshots/ai-chat-page.png)
-
-### AI Code Review Page
-![AI Code Review Page](docs/screenshots/ai-code-review-page.png)
-
-> Recommended screenshot size: `1440 × 900` or `1366 × 768`.
+| Page | Suggested File Name |
+|---|---|
+| Home Page | `screenshots/home-page.png` |
+| Sign In Page | `screenshots/sign-in-page.png` |
+| Sign Up Page | `screenshots/sign-up-page.png` |
+| Dashboard | `screenshots/dashboard-page.png` |
+| Developers Page | `screenshots/developers-page.png` |
+| Projects Page | `screenshots/projects-page.png` |
+| Jobs Page | `screenshots/jobs-page.png` |
+| AI Chat Page | `screenshots/ai-chat-page.png` |
+| AI Code Review Page | `screenshots/code-review-page.png` |
 
 ---
 
-## ✨ Main Features
-
-### Backend Features
-
-- User registration and login
-- JWT access token and refresh token flow
-- OAuth2 login support for Google, GitHub and LinkedIn
-- Email verification
-- Forgot password and reset password
-- Role-based access control
-- Admin dashboard APIs
-- Developer profile CRUD
-- Profile photo and cover image uploads
-- Follow/unfollow users
-- Job posting, filtering, saving and click tracking
-- Project posting, filtering, image upload and collaboration requests
-- Hackathon posting and team finder system
-- Verification request and admin review flow
-- Leaderboard and badge APIs
-- Notification APIs
-- AI chat conversations
-- AI code review requests
-- Cloudinary image upload
-- Swagger/OpenAPI documentation
-- Flyway database migrations
-- Docker and Docker Compose support
-
-### Frontend Features
-
-- Modern dark theme landing page
-- Responsive navbar and footer
-- Public pages for developers, projects, jobs, hackathons, team finder and leaderboard
-- Sign in, sign up and forgot password pages
-- OAuth callback handler
-- Protected dashboard routes
-- Dashboard quick actions and profile completion UI
-- Profile edit page
-- Project creation page
-- AI chat page
-- AI code review page
-- Notifications page
-- Verification request page
-- Settings page
-- Admin dashboard routes
-- Axios API integration layer
-- Zustand auth store
-- React Query setup
-- Reusable UI components
-
----
-
-## 🧱 Tech Stack
-
-### Frontend
+## 🛠️ Tech Stack
 
 | Category | Technology |
 |---|---|
 | Framework | React 19 |
-| Build Tool | Vite 7 |
 | Language | TypeScript |
+| Build Tool | Vite 7 |
+| Styling | Tailwind CSS 4 |
 | Routing | React Router DOM 7 |
-| State Management | Zustand |
-| API State | TanStack React Query |
-| HTTP Client | Axios |
+| API Client | Axios |
+| Server State | TanStack React Query |
+| Client/Auth State | Zustand |
 | Forms | React Hook Form |
 | Validation | Zod |
-| UI/Animation | Tailwind CSS 4, Framer Motion, GSAP |
-| Icons | Lucide React |
+| Animations | Framer Motion, GSAP |
+| 3D UI | Three.js, React Three Fiber, Drei |
 | Charts | Recharts |
-| 3D | Three.js, React Three Fiber, Drei |
+| Icons | Lucide React |
 | Toasts | Sonner |
-
-### Backend
-
-| Category | Technology |
-|---|---|
-| Language | Java 17 |
-| Framework | Spring Boot 3.2.1 |
-| Security | Spring Security, JWT, OAuth2 Client |
-| Database | MySQL 8 |
-| ORM | Spring Data JPA / Hibernate |
-| Migration | Flyway |
-| Cache/Session | Redis, Spring Session Data Redis |
-| API Docs | Springdoc OpenAPI / Swagger UI |
-| Mail | Spring Boot Mail |
-| Uploads | Cloudinary |
-| AI | Groq API through WebClient |
-| Build Tool | Maven |
-| Containerization | Docker, Docker Compose |
-| Utilities | Lombok, MapStruct |
+| Linting | ESLint |
 
 ---
 
-## 🗂️ Full Project Folder Structure
+## 📁 Folder Structure
 
-```text
-BuildWithUs/
-├── BuildWithUs-Backend-main/
-│   ├── .env.example
-│   ├── Dockerfile
-│   ├── docker-compose.yml
-│   ├── pom.xml
-│   └── src/
-│       └── main/
-│           ├── java/com/buildwithus/
-│           │   ├── BuildWithUsApplication.java
-│           │   ├── admin/
-│           │   ├── ai/
-│           │   ├── auth/
-│           │   ├── common/
-│           │   ├── config/
-│           │   ├── exception/
-│           │   ├── follow/
-│           │   ├── hackathon/
-│           │   ├── job/
-│           │   ├── leaderboard/
-│           │   ├── notification/
-│           │   ├── profile/
-│           │   ├── project/
-│           │   ├── security/
-│           │   ├── upload/
-│           │   ├── user/
-│           │   └── verification/
-│           └── resources/
-│               ├── application.yml
-│               ├── application-docker.yml
-│               └── db/migration/
-│                   ├── V1__initial_schema.sql
-│                   ├── V2__jobs_schema.sql
-│                   ├── V3__projects_schema.sql
-│                   ├── V4__ai_schema.sql
-│                   ├── V5__verification_hackathon_schema.sql
-│                   └── V6__leaderboard_notification_schema.sql
-│
-└── BuildWithUs-Frontend-main/
-    ├── .env
-    ├── index.html
-    ├── package.json
-    ├── vite.config.ts
-    ├── tsconfig.json
-    └── src/
-        ├── App.tsx
-        ├── main.tsx
-        ├── components/
-        │   ├── 3d/
-        │   ├── home/
-        │   ├── layout/
-        │   └── ui/
-        ├── hooks/
-        ├── lib/
-        ├── pages/
-        │   ├── admin/
-        │   ├── auth/
-        │   ├── dashboard/
-        │   ├── DashboardPage.tsx
-        │   ├── DevelopersPage.tsx
-        │   ├── DeveloperProfilePage.tsx
-        │   ├── HackathonsPage.tsx
-        │   ├── HomePage.tsx
-        │   ├── JobsPage.tsx
-        │   ├── LeaderboardPage.tsx
-        │   ├── OAuthCallbackPage.tsx
-        │   ├── ProjectsPage.tsx
-        │   └── TeamFinderPage.tsx
-        ├── services/
-        ├── store/
-        └── types/
+```txt
+BuildWithUs-Frontend-main/
+├── public/
+│   ├── uploads/
+│   │   └── upload_1.png
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   └── react.svg
+│   ├── components/
+│   │   ├── 3d/
+│   │   │   ├── Earth.tsx
+│   │   │   └── ParticleField.tsx
+│   │   ├── home/
+│   │   │   ├── AISection.tsx
+│   │   │   ├── CTASection.tsx
+│   │   │   ├── FeaturesSection.tsx
+│   │   │   ├── HeroSection.tsx
+│   │   │   ├── HowItWorksSection.tsx
+│   │   │   ├── StatsSection.tsx
+│   │   │   └── TestimonialsSection.tsx
+│   │   ├── layout/
+│   │   │   ├── DashboardLayout.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   └── Navbar.tsx
+│   │   └── ui/
+│   │       ├── Avatar.tsx
+│   │       ├── Badge.tsx
+│   │       ├── EmptyState.tsx
+│   │       ├── GlassCard.tsx
+│   │       ├── GlowButton.tsx
+│   │       ├── LoadingSkeleton.tsx
+│   │       ├── Modal.tsx
+│   │       └── SectionWrapper.tsx
+│   ├── hooks/
+│   │   └── useAuth.ts
+│   ├── lib/
+│   │   ├── axios.ts
+│   │   └── utils.ts
+│   ├── pages/
+│   │   ├── admin/
+│   │   │   └── AdminDashboard.tsx
+│   │   ├── auth/
+│   │   │   ├── ForgotPasswordPage.tsx
+│   │   │   ├── SignInPage.tsx
+│   │   │   └── SignUpPage.tsx
+│   │   ├── dashboard/
+│   │   │   ├── AIChatPage.tsx
+│   │   │   ├── AICodeReviewPage.tsx
+│   │   │   ├── NotificationsPage.tsx
+│   │   │   ├── ProfileEditPage.tsx
+│   │   │   ├── ProjectsCreatePage.tsx
+│   │   │   ├── SettingsPage.tsx
+│   │   │   └── VerificationPage.tsx
+│   │   ├── DashboardPage.tsx
+│   │   ├── DeveloperProfilePage.tsx
+│   │   ├── DevelopersPage.tsx
+│   │   ├── HackathonsPage.tsx
+│   │   ├── HomePage.tsx
+│   │   ├── JobsPage.tsx
+│   │   ├── LeaderboardPage.tsx
+│   │   ├── OAuthCallbackPage.tsx
+│   │   ├── ProjectsPage.tsx
+│   │   └── TeamFinderPage.tsx
+│   ├── services/
+│   │   ├── admin.service.ts
+│   │   ├── aiChat.service.ts
+│   │   ├── auth.service.ts
+│   │   ├── codeReview.service.ts
+│   │   ├── follow.service.ts
+│   │   ├── hackathon.service.ts
+│   │   ├── jobs.service.ts
+│   │   ├── leaderboard.service.ts
+│   │   ├── notifications.service.ts
+│   │   ├── profile.service.ts
+│   │   ├── projects.service.ts
+│   │   └── verification.service.ts
+│   ├── store/
+│   │   └── authStore.ts
+│   ├── types/
+│   │   └── index.ts
+│   ├── App.css
+│   ├── App.tsx
+│   ├── index.css
+│   └── main.tsx
+├── .env
+├── eslint.config.js
+├── index.html
+├── package.json
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
 
 ---
 
-## 🔐 Environment Variables
+## ⚙️ Environment Variables
 
-### Backend `.env.example`
-
-Create `.env` inside `BuildWithUs-Backend-main/`:
+Create a `.env` file in the frontend root.
 
 ```env
-SPRING_PROFILES_ACTIVE=dev
-
-# Database
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=buildwithus
-DB_USERNAME=root
-DB_PASSWORD=your_mysql_password
-
-# JWT
-JWT_SECRET=change-this-secret-with-a-long-random-value
-JWT_EXPIRATION=86400000
-JWT_REFRESH_EXPIRATION=604800000
-
-# Frontend URL
-APP_FRONTEND_URL=http://localhost:5173
-
-# Redis
-SPRING_DATA_REDIS_ENABLED=false
-SPRING_DATA_REDIS_HOST=localhost
-SPRING_DATA_REDIS_PORT=6379
-
-# OAuth2 - optional
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-GITHUB_CLIENT_ID=
-GITHUB_CLIENT_SECRET=
-LINKEDIN_CLIENT_ID=
-LINKEDIN_CLIENT_SECRET=
-
-# Cloudinary - optional
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
-
-# Groq AI - optional
-GROQ_API_KEY=
-GROQ_MODEL=llama-3.1-8b-instant
-
-# Mail - optional
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
-MAIL_USERNAME=
-MAIL_PASSWORD=
-```
-
-### Frontend `.env`
-
-Create `.env` inside `BuildWithUs-Frontend-main/`:
-
-```env
+# Backend REST API base URL
 VITE_API_BASE_URL=http://localhost:8080/api/v1
+
+# Backend base URL for OAuth redirects
 VITE_BACKEND_BASE_URL=http://localhost:8080
+
+# Frontend OAuth callback route
 VITE_OAUTH_CALLBACK_URL=http://localhost:5173/oauth2/redirect
+
+# Optional analytics
 VITE_GA_TRACKING_ID=
+
+# Optional Cloudinary upload values
 VITE_CLOUDINARY_CLOUD_NAME=
 VITE_CLOUDINARY_UPLOAD_PRESET=
 ```
 
----
+### Important Notes
 
-## ⚙️ Backend Setup — Without Docker
+- Vite environment variables must start with `VITE_`.
+- Do not commit real production secrets.
+- The frontend expects backend responses in a wrapper format like:
 
-### 1. Requirements
-
-- Java 17+
-- Maven 3.8+
-- MySQL 8+
-- Redis optional
-
-### 2. Create Database
-
-```sql
-CREATE DATABASE buildwithus;
+```json
+{
+  "success": true,
+  "message": "Request successful",
+  "data": {}
+}
 ```
 
-### 3. Configure Backend
-
-```bash
-cd BuildWithUs-Backend-main
-cp .env.example .env
-```
-
-Update database username/password in `.env` or `application.yml`.
-
-### 4. Run Backend
-
-```bash
-./mvnw spring-boot:run
-```
-
-On Windows PowerShell:
-
-```powershell
-.\mvnw.cmd spring-boot:run
-```
-
-Backend runs at:
-
-```text
-http://localhost:8080
-```
-
-Swagger UI:
-
-```text
-http://localhost:8080/swagger-ui/index.html
-```
+The Axios interceptor unwraps `data` automatically.
 
 ---
 
-## 🐳 Backend Setup — With Docker Compose
+## 🚀 Local Setup
 
-From backend folder:
-
-```bash
-cd BuildWithUs-Backend-main
-cp .env.example .env
-docker compose up --build
-```
-
-This starts:
-
-| Service | Port |
-|---|---|
-| Backend API | `8080` |
-| MySQL | `3307:3306` |
-| Redis | `6379` |
-
-Useful Docker commands:
+### 1. Clone the Repository
 
 ```bash
-docker compose up --build
-
-docker compose up -d
-
-docker compose logs -f app
-
-docker compose down
-
-docker compose down -v
+git clone <your-frontend-repo-url>
+cd BuildWithUs-Frontend-main
 ```
-
----
-
-## 🎨 Frontend Setup
-
-### 1. Requirements
-
-- Node.js 20+
-- npm 10+
 
 ### 2. Install Dependencies
 
 ```bash
-cd BuildWithUs-Frontend-main
 npm install
 ```
 
 ### 3. Configure Environment
 
-Create or update `.env`:
-
-```env
-VITE_API_BASE_URL=http://localhost:8080/api/v1
-VITE_BACKEND_BASE_URL=http://localhost:8080
-VITE_OAUTH_CALLBACK_URL=http://localhost:5173/oauth2/redirect
+```bash
+cp .env.example .env
 ```
 
-### 4. Run Frontend
+If `.env.example` is not available, create `.env` manually using the environment variables shown above.
+
+### 4. Start Development Server
 
 ```bash
 npm run dev
 ```
 
-Frontend runs at:
+Frontend will run at:
 
-```text
+```txt
 http://localhost:5173
 ```
 
-### 5. Production Build
+### 5. Build for Production
 
 ```bash
 npm run build
+```
+
+### 6. Preview Production Build
+
+```bash
 npm run preview
 ```
 
----
-
-## 🚀 Full Stack Run Order
-
-Follow this order for smooth setup:
+### 7. Run Lint
 
 ```bash
-# 1. Start backend dependencies + backend
-cd BuildWithUs-Backend-main
-docker compose up --build
-
-# 2. Start frontend in another terminal
-cd BuildWithUs-Frontend-main
-npm install
-npm run dev
-```
-
-Open:
-
-```text
-Frontend: http://localhost:5173
-Backend:  http://localhost:8080
-Swagger:  http://localhost:8080/swagger-ui/index.html
+npm run lint
 ```
 
 ---
 
-## 🧭 Frontend Routes
+## 📜 Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start Vite development server |
+| `npm run build` | Type-check and create production build |
+| `npm run preview` | Preview production build locally |
+| `npm run lint` | Run ESLint checks |
+
+---
+
+## 🧭 Application Routes
 
 ### Public Routes
 
 | Route | Page |
 |---|---|
 | `/` | Home page |
-| `/developers` | Developer directory |
-| `/developers/:username` | Developer profile |
-| `/projects` | Projects listing |
-| `/jobs` | Jobs listing |
-| `/hackathons` | Hackathons listing |
-| `/team-finder` | Team finder posts |
-| `/leaderboard` | Leaderboard |
+| `/developers` | Developer listing |
+| `/developers/:username` | Developer public profile |
+| `/projects` | Project listing |
+| `/jobs` | Job listing |
+| `/hackathons` | Hackathon listing |
+| `/team-finder` | Team finder page |
+| `/leaderboard` | Leaderboard page |
 
 ### Auth Routes
 
 | Route | Page |
 |---|---|
-| `/auth/sign-in` | Sign in |
-| `/auth/sign-up` | Sign up |
-| `/auth/forgot-password` | Forgot password |
-| `/oauth2/redirect` | OAuth callback handler |
+| `/auth/sign-in` | Sign in page |
+| `/auth/sign-up` | Sign up page |
+| `/auth/forgot-password` | Forgot password page |
+| `/oauth2/redirect` | OAuth callback page |
 
 ### Protected Dashboard Routes
+
+These routes require a valid access token and stored user data.
 
 | Route | Page |
 |---|---|
 | `/dashboard` | User dashboard |
-| `/dashboard/profile` | Logged-in profile |
+| `/dashboard/profile` | Current user profile |
 | `/dashboard/profile/edit` | Edit profile |
-| `/dashboard/projects` | Dashboard projects |
+| `/dashboard/projects` | User projects |
 | `/dashboard/projects/create` | Create project |
 | `/dashboard/jobs/saved` | Saved jobs |
 | `/dashboard/code-review` | AI code review |
 | `/dashboard/ai-chat` | AI chat |
-| `/dashboard/verification` | Verification request |
+| `/dashboard/verification` | Verification request/status |
 | `/dashboard/hackathons` | Dashboard hackathons |
 | `/dashboard/team-posts` | Team posts |
 | `/dashboard/notifications` | Notifications |
 | `/dashboard/settings` | Settings |
-| `/dashboard/following` | Following |
-| `/dashboard/followers` | Followers |
+| `/dashboard/following` | Following list |
+| `/dashboard/followers` | Followers list |
 | `/dashboard/collaborations` | Collaborations |
 
 ### Admin Routes
 
+Admin routes require authenticated user data with `ADMIN` role.
+
 | Route | Page |
 |---|---|
 | `/admin` | Admin dashboard |
-| `/admin/users` | Admin users |
-| `/admin/jobs` | Admin jobs |
-| `/admin/verifications` | Admin verification review |
-| `/admin/projects` | Admin projects |
-| `/admin/hackathons` | Admin hackathons |
+| `/admin/users` | Admin users area |
+| `/admin/jobs` | Admin jobs area |
+| `/admin/verifications` | Verification management |
+| `/admin/projects` | Admin projects area |
+| `/admin/hackathons` | Admin hackathons area |
 
 ---
 
-## 🔌 Backend API Endpoint Map
+## 🔐 Authentication Flow
 
-Base URL:
+The app stores authentication data in local storage using these keys:
 
-```text
-http://localhost:8080/api/v1
-```
-
-### Auth APIs
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/auth/register` | Register new user |
-| POST | `/auth/login` | Login user |
-| POST | `/auth/refresh` | Refresh access token |
-| POST | `/auth/logout` | Logout user |
-| POST | `/auth/forgot-password` | Send reset link/token |
-| POST | `/auth/reset-password` | Reset password |
-| GET | `/auth/verify` | Verify email |
-
-### User/Profile APIs
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/users/me` | Current user |
-| GET | `/users` | List users |
-| GET | `/users/search` | Search users |
-| POST | `/users/{userId}/block` | Block user |
-| POST | `/users/{userId}/unblock` | Unblock user |
-| DELETE | `/users/{userId}` | Delete user |
-| GET | `/profiles/me` | Current profile |
-| PUT | `/profiles/me` | Update profile |
-| GET | `/profiles/{username}` | Public profile |
-| GET | `/profiles` | List profiles |
-| GET | `/profiles/search` | Search profiles |
-| GET | `/profiles/filter` | Filter profiles |
-| GET | `/profiles/verified` | Verified profiles |
-| POST | `/profiles/me/photo` | Upload profile photo |
-| POST | `/profiles/me/cover` | Upload cover photo |
-| DELETE | `/profiles/me/photo` | Delete profile photo |
-| DELETE | `/profiles/me/cover` | Delete cover photo |
-
-### Follow APIs
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/follow/{userId}` | Follow user |
-| DELETE | `/follow/{userId}` | Unfollow user |
-| GET | `/follow/followers/{userId}` | Get followers |
-| GET | `/follow/following/{userId}` | Get following |
-| GET | `/follow/{userId}/stats` | Follow stats |
-| GET | `/follow/{userId}/check` | Check follow status |
-
-### Project APIs
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/projects` | Create project |
-| PUT | `/projects/{projectId}` | Update project |
-| DELETE | `/projects/{projectId}` | Delete project |
-| GET | `/projects/{projectId}` | Project by id |
-| GET | `/projects/slug/{slug}` | Project by slug |
-| GET | `/projects` | List projects |
-| GET | `/projects/search` | Search projects |
-| GET | `/projects/filter` | Filter projects |
-| GET | `/projects/my-projects` | My projects |
-| GET | `/projects/open-collaboration` | Open collaboration projects |
-| GET | `/projects/collaborating` | Projects where user collaborates |
-| POST | `/projects/{projectId}/collaborate` | Send collaboration request |
-| POST | `/projects/collaboration-requests/{requestId}/respond` | Accept/reject collaboration request |
-| GET | `/projects/my-collaboration-requests` | My sent requests |
-| GET | `/projects/requests-for-my-projects` | Requests for my projects |
-| GET | `/projects/{projectId}/requests` | Project requests |
-| GET | `/projects/{projectId}/collaborators` | Project collaborators |
-| DELETE | `/projects/{projectId}/collaborators/{collaboratorId}` | Remove collaborator |
-| POST | `/projects/{projectId}/images` | Upload project image |
-| DELETE | `/projects/{projectId}/images/{imageId}` | Delete project image |
-
-### Job APIs
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/jobs` | Create job |
-| PUT | `/jobs/{jobId}` | Update job |
-| DELETE | `/jobs/{jobId}` | Delete job |
-| GET | `/jobs/{jobId}` | Job by id |
-| GET | `/jobs` | List jobs |
-| GET | `/jobs/search` | Search jobs |
-| GET | `/jobs/filter` | Filter jobs |
-| GET | `/jobs/featured` | Featured jobs |
-| GET | `/jobs/my-posts` | My job posts |
-| POST | `/jobs/{jobId}/save` | Save job |
-| DELETE | `/jobs/{jobId}/save` | Unsave job |
-| GET | `/jobs/saved` | Saved jobs |
-| POST | `/jobs/{jobId}/click` | Track job click |
-
-### Hackathon & Team Finder APIs
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/hackathons` | Create hackathon |
-| PUT | `/hackathons/{hackathonId}` | Update hackathon |
-| DELETE | `/hackathons/{hackathonId}` | Delete hackathon |
-| GET | `/hackathons/{hackathonId}` | Hackathon by id |
-| GET | `/hackathons` | List hackathons |
-| GET | `/hackathons/search` | Search hackathons |
-| POST | `/hackathons/team-finder` | Create team finder post |
-| GET | `/hackathons/team-finder` | List team finder posts |
-| GET | `/hackathons/team-finder/type/{type}` | Team finder by type |
-| GET | `/hackathons/team-finder/my-posts` | My team posts |
-| GET | `/hackathons/{hackathonId}/team-finder` | Team posts by hackathon |
-| POST | `/hackathons/team-finder/{postId}/join` | Send join request |
-| POST | `/hackathons/team-finder/join-requests/{requestId}/respond` | Accept/reject join request |
-| GET | `/hackathons/team-finder/my-join-requests` | My join requests |
-| GET | `/hackathons/team-finder/requests-for-my-posts` | Requests for my posts |
-
-### AI APIs
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| POST | `/ai/chat/conversations` | Create chat conversation |
-| POST | `/ai/chat/conversations/{conversationId}/messages` | Send message |
-| GET | `/ai/chat/conversations/{conversationId}` | Conversation details |
-| GET | `/ai/chat/conversations` | Conversation list |
-| DELETE | `/ai/chat/conversations/{conversationId}` | Delete conversation |
-| POST | `/ai/code-review` | Submit code review |
-| GET | `/ai/code-review/{reviewId}` | Review by id |
-| GET | `/ai/code-review` | Review history |
-| DELETE | `/ai/code-review/{reviewId}` | Delete review |
-
-### Admin, Verification, Leaderboard, Notification, Upload APIs
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/admin/stats` | Admin dashboard stats |
-| POST | `/verification/request` | Request verification |
-| GET | `/verification/status` | Verification status |
-| GET | `/verification/pending` | Pending verification requests |
-| POST | `/verification/{requestId}/review` | Review verification request |
-| GET | `/leaderboard` | Leaderboard list |
-| GET | `/leaderboard/me` | Current user's leaderboard entry |
-| GET | `/leaderboard/user/{userId}` | User leaderboard entry |
-| GET | `/leaderboard/user/{userId}/badges` | User badges |
-| GET | `/leaderboard/me/badges` | Current user's badges |
-| GET | `/notifications` | Notification list |
-| GET | `/notifications/unread-count` | Unread count |
-| POST | `/notifications/{notificationId}/read` | Mark one read |
-| POST | `/notifications/read-all` | Mark all read |
-| DELETE | `/notifications/{notificationId}` | Delete notification |
-| POST | `/uploads/image` | Upload image |
-
----
-
-## 🔄 Authentication Flow
-
-1. User submits email/password from frontend.
-2. Frontend calls `POST /api/v1/auth/login`.
-3. Backend validates credentials.
-4. Backend returns access token, refresh token and user object.
-5. Frontend stores values in localStorage:
-
-```text
+```txt
 bwu_access_token
 bwu_refresh_token
 bwu_user
 ```
 
-6. Axios interceptor attaches token:
+### Auth Handling
 
-```http
+- Login/register responses save user and tokens through `authStore.ts`.
+- Axios request interceptor attaches access token as:
+
+```txt
 Authorization: Bearer <access_token>
 ```
 
-7. Protected React routes check localStorage token and user.
-8. Backend JWT filter validates token on protected API calls.
+- If an API call returns `401`, Axios tries to refresh the token through:
 
----
-
-## 🌐 OAuth2 Flow
-
-Frontend OAuth callback route:
-
-```text
-/oauth2/redirect
+```txt
+POST /auth/refresh
 ```
 
-Backend OAuth success should redirect to frontend like:
+- If refresh fails, local storage is cleared and the user is redirected to:
 
-```text
-http://localhost:5173/oauth2/redirect?token=<accessToken>&refreshToken=<refreshToken>
-```
-
-Backend OAuth failure should redirect like:
-
-```text
-http://localhost:5173/auth/sign-in?error=<message>
-```
-
-OAuth providers used in backend:
-
-- Google
-- GitHub
-- LinkedIn
-
----
-
-## 🧪 Useful Test Commands
-
-### Backend Health Check
-
-```bash
-curl http://localhost:8080/swagger-ui/index.html
-```
-
-### Register User
-
-```bash
-curl -X POST http://localhost:8080/api/v1/auth/register \
-  -H "Content-Type: application/json" \
-  -d '{
-    "name": "Keshav Upadhyay",
-    "username": "keshav",
-    "email": "keshav@example.com",
-    "password": "Password@123"
-  }'
-```
-
-### Login User
-
-```bash
-curl -X POST http://localhost:8080/api/v1/auth/login \
-  -H "Content-Type: application/json" \
-  -d '{
-    "email": "keshav@example.com",
-    "password": "Password@123"
-  }'
-```
-
-### Get Current User
-
-```bash
-curl http://localhost:8080/api/v1/users/me \
-  -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
+```txt
+/auth/sign-in
 ```
 
 ---
 
-## 📸 How To Add Real Frontend Screenshots
+## 🔌 API Service Layer
 
-Run frontend:
+All backend calls are grouped inside `src/services/`.
 
-```bash
-cd BuildWithUs-Frontend-main
-npm install
-npm run dev
-```
-
-Open these pages and capture screenshots:
-
-```text
-http://localhost:5173/
-http://localhost:5173/auth/sign-in
-http://localhost:5173/developers
-http://localhost:5173/projects
-http://localhost:5173/jobs
-http://localhost:5173/dashboard
-http://localhost:5173/dashboard/ai-chat
-http://localhost:5173/dashboard/code-review
-```
-
-Save screenshots here:
-
-```text
-BuildWithUs-Frontend-main/docs/screenshots/
-```
-
-Use the exact names mentioned in the screenshot section.
+| Service File | Responsibility |
+|---|---|
+| `auth.service.ts` | Login, register, logout, refresh, forgot password, current user |
+| `profile.service.ts` | Profile read/update, photo upload, profile search |
+| `projects.service.ts` | Project listing, details, create, update, delete, collaborate |
+| `jobs.service.ts` | Jobs, saved jobs, featured jobs, job CRUD |
+| `hackathon.service.ts` | Hackathons and team finder APIs |
+| `follow.service.ts` | Follow/unfollow, followers, following, follow check |
+| `leaderboard.service.ts` | Leaderboard and user badges |
+| `notifications.service.ts` | Notifications, unread count, mark read, delete |
+| `aiChat.service.ts` | AI chat conversations and messages |
+| `codeReview.service.ts` | AI code review submit/history/details/delete |
+| `verification.service.ts` | Verification request/status/admin review |
+| `admin.service.ts` | Admin stats, users, blocks, jobs |
 
 ---
 
-## 🧯 Troubleshooting
+## 🧩 Important Components
 
-### Backend is not connecting to MySQL
+### Layout Components
 
-Check:
+- `Navbar.tsx` — main navigation
+- `Footer.tsx` — footer section
+- `DashboardLayout.tsx` — dashboard wrapper/sidebar layout
 
-- MySQL service is running
-- Database exists
-- `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USERNAME`, `DB_PASSWORD` are correct
-- Docker uses internal service name like `mysql`, not `localhost`, inside compose network
+### Home Page Sections
 
-### Frontend API calls are failing
+- `HeroSection.tsx`
+- `FeaturesSection.tsx`
+- `StatsSection.tsx`
+- `HowItWorksSection.tsx`
+- `AISection.tsx`
+- `TestimonialsSection.tsx`
+- `CTASection.tsx`
 
-Check `.env`:
+### Reusable UI Components
+
+- `GlassCard.tsx`
+- `GlowButton.tsx`
+- `Modal.tsx`
+- `Badge.tsx`
+- `Avatar.tsx`
+- `EmptyState.tsx`
+- `LoadingSkeleton.tsx`
+- `SectionWrapper.tsx`
+
+---
+
+## 🧠 State Management
+
+### Zustand Auth Store
+
+File:
+
+```txt
+src/store/authStore.ts
+```
+
+The auth store manages:
+
+- Current user
+- Access token
+- Refresh token
+- Authenticated state
+- Loading state
+- Login/logout helpers
+- Persistent auth data
+
+### React Query
+
+`QueryClientProvider` is configured in `App.tsx` with:
+
+```ts
+staleTime: 1000 * 60 * 5
+retry: 1
+```
+
+This means query data stays fresh for 5 minutes and failed queries retry once.
+
+---
+
+## 🎨 Styling Guide
+
+The project uses Tailwind CSS with modern UI patterns:
+
+- Glassmorphism cards
+- Gradient backgrounds
+- Glow buttons
+- Animated sections
+- Responsive layouts
+- Dark theme style
+- Reusable UI wrappers
+
+Global styles are located in:
+
+```txt
+src/index.css
+src/App.css
+```
+
+---
+
+## 🧪 Recommended Testing Checklist
+
+Before pushing changes, manually test:
+
+- Home page loads correctly
+- Navbar links route correctly
+- Sign up page form works
+- Sign in page stores token and user
+- Protected routes redirect unauthenticated users
+- Dashboard routes load after login
+- OAuth callback handles `token`, `refreshToken`, and `error`
+- Token refresh works after access token expiry
+- Logout clears local storage
+- Admin routes reject non-admin users
+- Mobile responsive layout works
+- Production build completes successfully
+
+---
+
+## 🐞 Common Issues & Fixes
+
+### API calls failing with CORS error
+
+Check backend CORS configuration and make sure frontend origin is allowed:
+
+```txt
+http://localhost:5173
+```
+
+### User redirects to sign-in repeatedly
+
+Clear local storage and login again:
+
+```js
+localStorage.clear()
+```
+
+Then refresh the page.
+
+### OAuth login returns error
+
+Verify these values:
 
 ```env
-VITE_API_BASE_URL=http://localhost:8080/api/v1
-```
-
-Then restart Vite:
-
-```bash
-npm run dev
-```
-
-### OAuth redirects to wrong URL
-
-Check:
-
-```env
-APP_FRONTEND_URL=http://localhost:5173
+VITE_BACKEND_BASE_URL=http://localhost:8080
 VITE_OAUTH_CALLBACK_URL=http://localhost:5173/oauth2/redirect
 ```
 
-Also verify provider redirect URLs in Google/GitHub/LinkedIn developer console.
+Also make sure the backend OAuth redirect URI matches the frontend callback route.
 
-### CORS issue
+### Build fails due to TypeScript errors
 
-Allow frontend origin in backend security/CORS configuration:
+Run:
 
-```text
-http://localhost:5173
+```bash
+npm run build
 ```
 
-### Flyway migration error
+Fix all TypeScript errors shown in the terminal before deployment.
 
-For local development only, if database is broken:
+### Blank page after deployment
 
-```sql
-DROP DATABASE buildwithus;
-CREATE DATABASE buildwithus;
-```
+Check:
 
-Then restart backend so Flyway can recreate tables.
-
-### Docker compose warning: version is obsolete
-
-Remove the top-level `version:` key from `docker-compose.yml` if Docker shows this warning.
+- Browser console errors
+- Correct API URL in `.env`
+- SPA fallback routing on hosting provider
+- Correct build output directory: `dist/`
 
 ---
 
-## ✅ Recommended Development Workflow
+## 🌍 Deployment
+
+### Build Output
+
+After running:
 
 ```bash
-# 1. Clone repository
-git clone <repo-url>
+npm run build
+```
 
-# 2. Start backend
-cd BuildWithUs-Backend-main
-docker compose up --build
+Vite creates production files in:
 
-# 3. Start frontend
-cd ../BuildWithUs-Frontend-main
+```txt
+dist/
+```
+
+### Deploy on Vercel
+
+| Setting | Value |
+|---|---|
+| Framework Preset | Vite |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+| Install Command | `npm install` |
+
+Add production environment variables in Vercel dashboard.
+
+### Deploy on Netlify
+
+| Setting | Value |
+|---|---|
+| Build Command | `npm run build` |
+| Publish Directory | `dist` |
+
+For SPA routing, add `_redirects` file in `public/`:
+
+```txt
+/* /index.html 200
+```
+
+---
+
+## 🤝 Contribution Workflow
+
+```bash
+# 1. Fork the repository
+# 2. Clone your fork
+git clone <your-fork-url>
+
+# 3. Create a new branch
+git checkout -b feature/your-feature-name
+
+# 4. Install dependencies
 npm install
+
+# 5. Start development server
 npm run dev
 
-# 4. Open app
-http://localhost:5173
+# 6. Commit changes
+git add .
+git commit -m "feat: add your feature"
+
+# 7. Push branch
+git push origin feature/your-feature-name
+
+# 8. Open Pull Request
 ```
 
 ---
 
-## 🤝 Contribution Guide
+## ✅ README Screenshot Setup
 
-1. Fork the repository
-2. Create a feature branch
+For best GitHub presentation:
 
-```bash
-git checkout -b feature/your-feature-name
+1. Create this folder in your repository:
+
+```txt
+screenshots/
 ```
 
-3. Make changes
-4. Commit changes
+2. Add your frontend screenshots:
 
-```bash
-git add .
-git commit -m "feat: add your feature"
+```txt
+screenshots/home-page.png
+screenshots/sign-in-page.png
+screenshots/dashboard-page.png
+screenshots/projects-page.png
 ```
 
-5. Push branch
+3. Use this Markdown format:
 
-```bash
-git push origin feature/your-feature-name
+```md
+![Home Page](./screenshots/home-page.png)
 ```
-
-6. Open a pull request
 
 ---
 
 ## 👨‍💻 Author
 
+<div align="center">
+
 **Keshav Upadhyay**  
 Aspiring Software Developer | Backend Enthusiast
 
+[GitHub](https://github.com/gitKeshav11) · [LinkedIn](https://www.linkedin.com/in/keshavupadhyayje/)
+
+</div>
+
 ---
 
-## 📄 License
+<div align="center">
 
-This project can be released under the MIT License. Add a `LICENSE` file if you want to officially publish it as open-source.
+⭐ If you like this project, give it a star on GitHub!
+
+</div>
