@@ -35,7 +35,8 @@ This repository contains only the **frontend client** of BuildWithUs. It communi
 
 ### Home / Landing Preview
 
-![Home Preview](./screenshots/home-preview.png)
+### 🏠 Home Page
+![Home](./BuildWithUs-Frontend/assets/screenshots/home-preview.png)
 
 Recommended screenshot list for GitHub README:
 
@@ -650,16 +651,18 @@ screenshots/projects-page.png
 
 ---
 
-## 👨‍💻 Author
+## 👨‍💻 Author & Contributors
+  <a href="https://github.com/gitKeshav11/BuildWithUs/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=gitKeshav11/BuildWithUs" />
+  </a>
+  
+## 📞 Contact
+### 👨‍💻 Keshav Upadhyay  
+**🚀 Role:** Software Developer (Java & Spring Boot)  
 
-<div align="center">
-
-**Keshav Upadhyay**  
-Aspiring Software Developer | Backend Enthusiast
-
-[GitHub](https://github.com/gitKeshav11) · [LinkedIn](https://www.linkedin.com/in/keshavupadhyayje/)
-
-</div>
+📧 **Email:** [gitKeshav11@gmail.com](mailto:gitKeshav11@gmail.com)  
+🔗 **LinkedIn:** [Keshav Upadhyay](https://www.linkedin.com/in/gitKeshav11/)  
+🐙 **GitHub:** [gitKeshav11](https://github.com/gitKeshav11)  
 
 ---
 
