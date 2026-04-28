@@ -36,7 +36,7 @@ This repository contains only the **frontend client** of BuildWithUs. It communi
 ### Home / Landing Preview
 
 ### 🏠 Home Page
-![Home](./BuildWithUs-Frontend/assets/screenshots/home-preview.png)
+![Home](./assets/screenshots/home-preview.png)
 
 Recommended screenshot list for GitHub README:
 
